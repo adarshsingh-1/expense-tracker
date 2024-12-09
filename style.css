@@ -1,0 +1,145 @@
+/* Global Reset */
+* {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Fancy Gradient Background with Animation */
+  body {
+    background: linear-gradient(45deg, #6a11cb, #2575fc); /* Gradient from purple to blue */
+    background-size: 400% 400%; /* Expands gradient for smooth movement */
+    animation: gradient-animation 15s ease infinite; /* Animation to move the gradient */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  @keyframes gradient-animation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  /* Container Styling */
+  .container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    text-align: center;
+  }
+  
+  /* Date Styling */
+  .date {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  
+  /* Header Styling */
+  h1, h2, h3 {
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  /* Form Styling */
+  form input, form button {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  form button {
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+  }
+  
+  form button:hover {
+    background-color: #45a049;
+  }
+  
+  /* Expense List Styling */
+  #expense-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  #expense-list li {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #f9f9f9;
+    margin: 5px 0;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Remove Button Styling */
+  #expense-list li button {
+    background-color: #ff4757;  /* Soft red for the remove button */
+    color: white;
+    border: 2px solid #ff6b81;  /* Lighter border color */
+    padding: 5px 15px;
+    font-size: 0.9rem;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;  /* Smooth transition effect */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  /* Slight shadow */
+  }
+  
+  /* Hover effect for remove button */
+  #expense-list li button:hover {
+    background-color: #ff6b81;  /* Lighter red on hover */
+    border-color: #ff4757;  /* Darker red border on hover */
+    transform: scale(1.1);  /* Slightly enlarge the button */
+  }
+  
+  /* Remove button active (when clicked) */
+  #expense-list li button:active {
+    background-color: #ff3b46;  /* Dark red when clicked */
+    transform: scale(0.98);  /* Shrink the button slightly when clicked */
+  }
+  
+  /* Optional: add a subtle animation on remove button appearance */
+  @keyframes button-fade-in {
+    0% {
+      opacity: 0;
+      transform: scale(0.5);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  #expense-list li button {
+    animation: button-fade-in 0.5s ease-out;
+  }
+  
+  /* Expense Date Styling */
+  .expense-date {
+    font-size: 0.9rem;
+    color: #666;
+    margin-left: 10px;
+  }
+  
+  /* Total Expense Styling */
+  h3 {
+    font-size: 1.2rem;
+    color: #333;
+  }
+  
